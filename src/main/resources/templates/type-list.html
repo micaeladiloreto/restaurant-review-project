@@ -1,0 +1,59 @@
+<!-- type-list.html   /static/ is the root-->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/layout.css" rel="stylesheet">
+    <title>Restaurant Connoisseurs</title>
+</head>
+
+<body>
+<div class="wrapper">
+
+    <header>
+        <div>
+            <img alt="Vertical neon sign of the word 'EAT'" height="200" src="/images/neon-sign-eat.jpg">
+        </div>
+        <div>
+            <p class="h-title">Restaurant Connoisseurs</p>
+        </div>
+        <div>
+            <p class="h-perspective">A New Perspective In Your Dining Experience</p>
+        </div>
+        <div class="neon-open-sign">
+            <img alt="Horizontal neon sign of the word 'OPEN'" height="200" src="/images/neon-open.jpg">
+        </div>
+    </header>
+
+    <div class="left-side">
+    </div>
+
+    <main>
+        <h1>Restaurant Categories</h1>
+        <ul th:each="rest:${allRests}">   <!-- Comes from RestaurantController.java  -->
+            <li><a th:href="@{/type-of-restaurants/{name}(name = ${rest.name})}">
+                <span class="capitalize" th:text="${rest.name.toLowerCase()}">06</span></a></li>
+        </ul>
+    </main>
+
+    <nav class="right-side">
+        <ul id="nav">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/type-of-restaurants">Restaurant<br>Categories</a></li>
+            <li><a href="/hashtags">Restaurant<br>#Hashtag</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p><small>&copy; 2021 Restaurant Gurus</small></p>
+        <p><a href="/credits.html">&lt;credits&gt;</a></p>
+    </footer>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!-- index.html   /static/ is the root-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+    <title>Restaurant Connoisseurs</title>
+</head>
+
+<body>
+<div class="wrapper">   <!-- this class provides the boundaries for the grid layout -->
+    <header>
+        <!-- this is a component of the bigger grid.  Within this component a smaller container using display:flex is created -->
+        <div>   <!-- this is the first division of the header container -->
+            <img alt="Vertical neon sign of the word 'EAT'" height="200" src="images/neon-sign-eat.jpg">
+        </div>
+        <div>   <!-- this is the second division of the header container -->
+            <p class="h-title">Restaurant Connoisseurs</p>
+        </div>
+        <div>   <!-- this is the third division of the header container -->
+            <p class="h-perspective">A New Perspective In Your Dining Experience</p>
+        </div>
+        <div class="neon-open-sign">  <!-- this is the last division of the header container -->
+            <img alt="Horizontal neon sign of the word 'OPEN'" height="200" src="images/neon-open.jpg">
+        </div>
+    </header>
+
+    <div class="left-side">
+    </div>
+
+    <main>
+        <div>
+            <h1>Welcome to Restaurant Connoisseurs!</h1>
+            <p>Where you can find honest reviews for restaurants.</p>
+        </div>
+    </main>
+
+    <nav class="right-side">
+        <ul id="nav">
+            <li><a href="/index.html">Home</a></li>    <!-- Brings us back to this page -->
+            <li><a href="/type-of-restaurants">Restaurant<br>Categories</a></li>  <!-- takes us to restaurantController.java where '@RequestMapping("type-of-restaurants")' is defined -->
+            <li><a href="/hashtags">Restaurant<br>#Hashtag</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p><small>&copy; 2021 Restaurant Gurus</small></p>
+        <p><a href="credits.html">&lt;credits&gt;</a></p>
+    </footer>
+</div>
+
+</body>
+
+</html>
